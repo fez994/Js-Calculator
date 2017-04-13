@@ -1,62 +1,27 @@
-body, div, a {
-    padding:0;
-    margin:0;
-    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
-}
+#output {
+  height: 45px;
+  background-color: black;
+  color: aqua;
+  width: 100%;
+  font-style: 2em;
+  padding: 5px;
+  text-align: right;
+  margin-bottom: 25px;
+  overflow: hidden; }
 
-#calculator {
-	background-color: #999;
-	width: 310px;
-	height: 460px;
-	border: 3px black solid;
-	margin: 10px auto;
-	padding: 5px;
-	border-radius: 10px;
-}
+#mycalculator {
+  width: 350px;
+  background-color: dimgray;
+  height: 350px;
+  padding: 25px; }
 
-#total {
-    height: 70px;
-    width: 300px;
-    margin:auto;
-    background-color:white;
-    margin-bottom: 5px;
-    text-align: right;
-    font-size: 60px;
-    padding: 0 5px;
-}
+.cbutton {
+  font-style: 2em;
+  width: 45px;
+  margin: 4px;
+  padding: 4px; }
 
-#numbers, #operators {
-	margin: auto;	
-}
+.container {
+  padding: 25px; }
 
-#operators a {
-	display: block;
-	width: 45px;
-	height: 45px;
-	float: left;
-	text-decoration: none;
-	color: black;
-	text-align: center;
-	font-size: 39px;
-	padding: 2px;
-	margin: 5px 6px;
-	background: -webkit-gradient(linear, left top, left bottom, from(#EDEDED), to(#DCDCDC));
-	background: -moz-linear-gradient(top, #EDEDED, #DCDCDC);
-	border-radius: 10px;
-}
-
-#numbers a {
-	display: block;
-	width: 50px;
-	height: 50px;
-	float: left;
-	text-decoration: none;
-	color: black;
-	text-align: center;
-	font-size: 32pt;
-	padding: 10px;
-	margin: 5px 15px;
-	background: -webkit-gradient(linear, left top, left bottom, from(#EDEDED), to(#DCDCDC));
-	background: -moz-linear-gradient(top, #EDEDED, #DCDCDC);
-	border-radius: 10px;
-}
+/*# sourceMappingURL=style.css.map */
