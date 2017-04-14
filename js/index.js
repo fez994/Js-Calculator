@@ -22,7 +22,7 @@
                 myCom = true;
             } else {
                 myCal = myCal + myValue;
-                console.log(myCal);
+                //console.log(myCal);
             }
            
             myOutput.innerHTML = myCal;
