@@ -1,7 +1,17 @@
+/* #313131 */
+html, body {
+  background-color: #EC625F;
+  letter-spacing: 3px; }
+
+h1 {
+  padding-bottom: 10%;
+  font-family: "Stint Ultra Expanded", cursive;
+  color: #414141; }
+
 #output {
   height: 45px;
-  background-color: black;
-  color: aqua;
+  background-color: #525252;
+  color: #EC625F;
   width: 100%;
   font-style: 2em;
   padding: 5px;
@@ -11,17 +21,29 @@
 
 #mycalculator {
   width: 350px;
-  background-color: dimgray;
+  background-color: #414141;
   height: 350px;
-  padding: 25px; }
+  padding: 25px;
+  margin: auto; }
 
 .cbutton {
   font-style: 2em;
   width: 45px;
   margin: 4px;
-  padding: 4px; }
+  padding: 4px;
+  background-color: #414141;
+  border: 1px solid #525252; }
 
 .container {
   padding: 25px; }
+
+.cbutton:hover {
+  background-color: transparent !important;
+  border: 1px solid #EC625F; }
+
+#calc-order {
+  width: 300px;
+  color: white;
+  background-color: #414141; }
 
 /*# sourceMappingURL=style.css.map */
