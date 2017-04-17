@@ -1,6 +1,4 @@
-    /*
-
-
+    
     var myBtn = document.getElementsByClassName('cbutton');
     var myOutput = document.getElementById('output');
     var myCal = "";
@@ -8,95 +6,70 @@
     var mySwitch = false;
     var myOperators = ["+", "-", "*", "/"];
 
-    for(var i=0; i < myBtn.length; i++) {
-        myBtn[i].addEventListener('click', function() {
+    for(var i= 0; i < myBtn.length; i++) {
+        myBtn[i].addEventListener("click", function() {
             var myValue = this.innerHTML;
 
-            //console.log(myValue);
+            // if my Com or myCal are equal to 0, i will set myCal to an empty string. This is useful for prevent the user to input multiple 0
             if(myCom || myCal == "0") {
                 myCom = false;
                 myCal = "";
             }
 
+
+             // this will prevent the user to click any sign multiple times and screw the calculations
             if(myValue == "+" || myValue == "-" || myValue == "*" || myValue == "/") {
-                if(mySwitch) {
-                mySwitch = false;
                 if(myOperators.indexOf(myOutput.innerHTML.slice(-1)) > -1) {
-                    myCal = myCal.substring(0, myCal.length -1);
-                } else {
-                    myCal = eval(myCal);
+                    myCal = myCal.substring(0, myCal.length - 1);
                 }
-                
-            }
-                mySwitch = true;
             } 
 
+            // this will be useful to set everything
+            if(myCom) {
+                myCom = false;
+                myCal = "";
+            }
 
-            if(myValue == "="){
+            // this will let the user + - * / the result
+            if(mySwitch) {
+                mySwitch = false;
+                sum(myCal, myValue);
+            }
+
+            //Evaluating the string when the user press the = sign
+            if(myValue == "=") {
                 myCal = eval(myCal);
                 //console.log(myCal);
-                myCom = true;
+                mySwitch = true;
+                
+                
+
+            // setting our value to 0 when user click on AC
             } else if(myValue == "AC") {
                 myCal = 0;
                 myCom = true;
+            // if the user doesn't click = or AC, we will simply add the value to the string
             } else {
-                myCal = myCal + myValue;
-                //console.log(myCal);
+               myCal = myCal + myValue; 
+
             }
 
 
+            
+
+            // outputting my cal
             myOutput.innerHTML = myCal;
+
+
+           
+            function sum(myCal, myVal) {
+                myCal = myCal + myVal;
+            }
+            
+
+
 
         });
     }
 
-
-
-
-*/ 
-
-        var mybtn = document.getElementsByClassName("cbutton");
-        var myOutput = document.getElementById("output");
-        var line = document.getElementById('calc-order')
-        var myCal = '';
-        var myCom = false;
-        var mySwitch = false;
-        var myOpe = ["+", "-", "*", "/"];
-        //console.log(mybtn);
-        for (var i = 0; i < mybtn.length; i++) {
-            mybtn[i].addEventListener("click", function () {
-                var myValue = this.innerHTML;
-                if (myCom || myCal == "0") {
-                    myCom = false;
-                    myCal = '';
-                }
-                if (myValue == "+" || myValue == "-" || myValue == "*" || myValue == "/") {
-                    if (mySwitch) {
-                        mySwitch = false;
-                        if (myOpe.indexOf(myOutput.innerHTML.slice(-1)) > -1) {
-                            myCal = myCal.substring(0, myCal.length - 1);
-                        } else {
-                            myCal = eval(myCal);
-                        }
-                    }
-                    mySwitch = true;
-                }
-                if (myValue == "=") {
-                    myValue = '';
-                    if (myOpe.indexOf(myOutput.innerHTML.slice(-1)) == -1) {
-                        myCal = eval(myCal);
-                    }
-                } else if (myValue == "AC") {
-                    myCal = 0;
-                    myCom = true;
-                } else if (myOutput.innerHTML.indexOf(".") > -1 && myValue == ".") {
-                    myValue = '';
-                } else {
-                    myCal = myCal + myValue;
-                    line.innerHTML = myCal;
-                    console.log(myCal);
-                }
-                myOutput.innerHTML = myCal;
-            });
-        }
 
