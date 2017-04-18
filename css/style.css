@@ -6,7 +6,9 @@ html, body {
 h1 {
   padding-bottom: 10%;
   font-family: "Stint Ultra Expanded", cursive;
-  color: #414141; }
+  color: #414141;
+  text-transform: uppercase;
+  letter-spacing: 5px; }
 
 #output {
   height: 60px;
@@ -24,21 +26,27 @@ h1 {
   background-color: #414141;
   height: 320px;
   padding: 20px;
-  margin: auto; }
+  margin: auto;
+  box-shadow: 7px 10px 34px 1px #414141, inset -1px -6px 12px 0.1px #414141; }
 
 .cbutton {
   font-style: 2em;
   width: 60px;
-  margin: 4px;
-  padding: 4px;
   background-color: #414141;
-  border: 1px solid #525252; }
+  border: 1px solid #525252;
+  margin: 4px; }
 
 .container {
   padding: 25px; }
 
 .cbutton:hover {
-  background-color: transparent !important;
+  background-color: transparent;
   border: 1px solid #EC625F; }
+
+.no-padding {
+  text-align: center !important; }
+
+#equal-sign {
+  height: 75px; }
 
 /*# sourceMappingURL=style.css.map */

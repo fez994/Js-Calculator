@@ -6,14 +6,15 @@ $grey: #525252
 
 
 html, body 
-	background-color: $red
+	background-color: $red 
 	letter-spacing: 3px
-
 
 h1
 	padding-bottom: 10%
 	font-family: 'Stint Ultra Expanded', cursive
 	color: $black
+	text-transform: uppercase
+	letter-spacing: 5px
 
 
 
@@ -37,25 +38,31 @@ h1
 	height: 320px
 	padding: 20px
 	margin: auto
+	box-shadow: 7px 10px 34px 1px $black, inset -1px -6px 12px 0.1px $black
 
 
 
 .cbutton
 	font-style: 2em
 	width: 60px
+	background-color: $black 
+	border: 1px solid $grey 
 	margin: 4px
-	padding: 4px
-	background-color: $black
-	border: 1px solid $grey
-
+	
 
 .container 
 	padding: 25px
 	
 
 .cbutton:hover 
-	background-color: transparent !important
-	border: 1px solid $red
+	background-color: transparent 
+	border: 1px solid $red 
 
 
 
+.no-padding
+	text-align: center !important
+
+
+#equal-sign 
+	height: 75px

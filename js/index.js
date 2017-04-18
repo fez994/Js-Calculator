@@ -54,20 +54,13 @@
 
             }
 
-
-            
-
             // outputting my cal
             myOutput.innerHTML = myCal;
-
-
-           
+      
             function sum(myCal, myVal) {
                 myCal = myCal + myVal;
             }
             
-
-
 
         });
     }
