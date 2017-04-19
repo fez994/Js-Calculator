@@ -8,10 +8,11 @@ h1 {
   font-family: "Stint Ultra Expanded", cursive;
   color: #414141;
   text-transform: uppercase;
-  letter-spacing: 5px; }
+  letter-spacing: 6px;
+  font-size: 300% !important; }
 
 #output {
-  height: 60px;
+  height: 50px;
   background-color: #525252;
   color: #EC625F;
   width: 100%;
@@ -22,7 +23,7 @@ h1 {
   overflow: hidden; }
 
 #mycalculator {
-  width: 500px;
+  width: 420px;
   background-color: #414141;
   height: 320px;
   padding: 20px;
@@ -43,10 +44,19 @@ h1 {
   background-color: transparent;
   border: 1px solid #EC625F; }
 
-.no-padding {
-  text-align: center !important; }
-
 #equal-sign {
-  height: 75px; }
+  height: 159px !important;
+  width: 70%;
+  float: left; }
+
+.row {
+  text-align: center; }
+
+.col-xs-3, .col-md-3, .col-xl-3 {
+  width: 20% !important;
+  padding-right: 3px; }
+
+.cbutton:hover, :after {
+  background-color: transparent !important; }
 
 /*# sourceMappingURL=style.css.map */
