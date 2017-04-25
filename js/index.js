@@ -4,7 +4,7 @@
     var myCal = "";
     var myCom = false;
     var mySwitch = false;
-    var myOperators = ["+", "-", "*", "/"];
+    var myOperators = ["+", "-", "*", "/", "."];
 
     for(var i= 0; i < myBtn.length; i++) {
         myBtn[i].addEventListener("click", function() {
@@ -19,7 +19,7 @@
 
 
              // this will prevent the user to click any sign multiple times and screw the calculations
-            if(myValue == "+" || myValue == "-" || myValue == "*" || myValue == "/") {
+            if(myValue == "+" || myValue == "-" || myValue == "*" || myValue == "/" || myValue == ".") {
                 if(myOperators.indexOf(myOutput.innerHTML.slice(-1)) > -1) {
                     myCal = myCal.substring(0, myCal.length - 1);
                 }
